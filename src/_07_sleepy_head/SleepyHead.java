@@ -18,7 +18,7 @@ public class SleepyHead {
          * Ask the user for these values using a confirm dialog like the one below
          * JOptionPane.showConfirmDialog(null, "Is it a weekday?", "Sleepy Head", JOptionPane.YES_NO_OPTION);
          */
-    
+        //isWeekday = JOptionPane.showConfirmDialog(null, "Is it a weekday?", "Sleepy Head", JOptionPane.YES_NO_OPTION);
 
 
         /*
