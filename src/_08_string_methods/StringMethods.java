@@ -8,7 +8,7 @@ public class StringMethods {
 	public static void main(String[] args) {
 		
 		// 1. Create a String variable and initialize it to whatever you want
-		String a = "asdfjkl";
+		String a = "whatever you want";
 		// 2. Print the 3rd char of your String to the console.
 		//    HINT: .charAt
 		JOptionPane.showMessageDialog(null, a.charAt(2));
@@ -26,13 +26,10 @@ public class StringMethods {
 		//    Print the char's position to the console.
 		//    EXAMPLE: if your string is "abc" and you are searching 
 		//             for char 'b', then print "b is at index 1"
-		for(int j=0; j<a.length(); j++) {
-			//String c = a.charAt(j);
-			//if(c=b) {
-			//JOptionPane.showMessageDialog(null, "There is a " + b + " at index " + (j+1) +".");
-			//}
+		for(int j=1; j<=a.length(); j++) {
+			if(a.charAt(j)==b.charAt(0)){
+				JOptionPane.showMessageDialog(null, "'" + b + "' is at index " + j +".");
+			}
 		}
 	}
 }
-
-
