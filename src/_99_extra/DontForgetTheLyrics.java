@@ -21,20 +21,33 @@ public class DontForgetTheLyrics {
 	
 	public static void main(String[] args) {
 		// 4. Make a pop-up to explain the game.
-
+		JOptionPane.showMessageDialog(null, "For this game, we'll play the start of a song,\n and the player has to guess the rest of the lyrics.");
 		// 5. Use the playSound method to play your song.
-
+		JOptionPane.showMessageDialog(null, "1 2 ");
 		// 6. Make a pop-up for the player to type their answer.
-
+		String a = JOptionPane.showInputDialog(null, "rest of the lyrics");
 		// 7. If they answered correctly, tell them that they were right.
-
+		if(a.equals("3")) {
+			JOptionPane.showMessageDialog(null, "right");
+		}else {
+			JOptionPane.showMessageDialog(null, "wrong");
+		}
 		// 8. Otherwise, tell them they are wrong, and give them the answer.
-
+		JOptionPane.showMessageDialog(null, "a b ");
+		// 6. Make a pop-up for the player to type their answer.
+		String b = JOptionPane.showInputDialog(null, "rest of the lyrics");
+		// 7. If they answered correctly, tell them that they were right.
+		if(b.equals("c")) {
+			JOptionPane.showMessageDialog(null, "right");
+		}else {
+			JOptionPane.showMessageDialog(null, "wrong");
+		}
 		// 9. Record another sound and repeat steps 5-8.
-
+		
 		// 10. [optional] Add a points variable that will calculate their final score.
+		//bar?
 	}
-
+	
 	public static void playSound(String fileName) {
 		AudioClip audioClip = JApplet.newAudioClip(new DontForgetTheLyrics().getClass().getResource(fileName));
 		audioClip.play();
