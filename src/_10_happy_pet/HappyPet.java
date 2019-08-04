@@ -12,22 +12,24 @@ public class HappyPet {
 		int happinessLevel = 0;
 		// 7. REPEAT steps 3 - 6 enough times to make your pet happy!
 		while(happinessLevel <= 100) {
-			
 			// 3. Use showOptionDialog to ask the user what they want to do to make their pet happy
 			//    (eg: cuddle, food, water, take a walk, groom, clean up poop).
 			//    Make sure to customize the title and question too.
-			int task = JOptionPane.showOptionDialog(null, "What do you want to do to care for your pet.", "Pet Care", 0, JOptionPane.INFORMATION_MESSAGE, null, new String[] { "Feed", "Clean", "Groom" , "???"}, null); //groom=2, clean=1, feed=0
+			int task = JOptionPane.showOptionDialog(null, "What do you want to do to care for your pet.", "Pet Care", 0, JOptionPane.INFORMATION_MESSAGE, null, new String[] { "Feed", "Clean", "Groom" , "Pet"}, null); //groom=2, clean=1, feed=0
 			//System.err.println(task);
 			// 5. Use user input to call the appropriate method created in step 4.
 			if(task==0) {
 				JOptionPane.showMessageDialog(null, "You fed your pet");
-				happinessLevel = happinessLevel+((100/3)+1);
+				happinessLevel = happinessLevel+(100/4);
 			}else if(task==1) {
 				JOptionPane.showMessageDialog(null, "You cleaned your pet");
-				happinessLevel = happinessLevel+((100/3)+1);
+				happinessLevel = happinessLevel+(100/4);
 			}else if(task==2) {
-				JOptionPane.showMessageDialog(null, "You groomed you pet");
-				happinessLevel = happinessLevel+((100/3)+1);
+				JOptionPane.showMessageDialog(null, "You groomed your pet");
+				happinessLevel = happinessLevel+(100/4);
+			}else if(task==3) {
+				JOptionPane.showMessageDialog(null, "You pet your pet");
+				happinessLevel = happinessLevel+(100/4);
 			}else {
 				JOptionPane.showMessageDialog(null, "?");
 				//happinessLevel = Random(100);

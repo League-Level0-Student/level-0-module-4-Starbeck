@@ -25,7 +25,7 @@ public class SleepyHead {
         	isWeekday=true;
         	}else if(a==1){
         	isWeekday=false;
-        	}else {
+        	}else{
         		JOptionPane.showMessageDialog(null, "?");
         	}
         
@@ -33,16 +33,16 @@ public class SleepyHead {
         //JOptionPane.showMessageDialog(null, b);
         if(b==0){
         	isVacation=true;
-        	}else if(b==1){
+        }else if(b==1){
         	isVacation=false;
-        	}else {
-        		JOptionPane.showMessageDialog(null, "?");
-        	}
+        }else{
+        	JOptionPane.showMessageDialog(null, "?");
+        }
         if(a==1 || b==0){
         JOptionPane.showMessageDialog(null, "Sleep in.");
         }else if(a==0&&b==1){
         	JOptionPane.showMessageDialog(null, "Get up.");
-        }else {
+        }else{
         	JOptionPane.showMessageDialog(null, "~");
         }
         /*

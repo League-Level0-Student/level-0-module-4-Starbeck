@@ -11,10 +11,10 @@ public class StringMethods {
 		String a = "whatever you want";
 		// 2. Print the 3rd char of your String to the console.
 		//    HINT: .charAt
-		JOptionPane.showMessageDialog(null, a.charAt(2));
+		//JOptionPane.showMessageDialog(null, a.charAt(2));
 		// 3. Print the length of your String to the console.
 		//    HINT: .length()
-		JOptionPane.showMessageDialog(null, a.length());
+		//JOptionPane.showMessageDialog(null, a.length());
 		// 4. Using a for loop, print one char at time to the console.
 		//    HINT: use .length() to determine how many loops
 		for(int i=0; i<a.length(); i++) {
@@ -26,7 +26,7 @@ public class StringMethods {
 		//    Print the char's position to the console.
 		//    EXAMPLE: if your string is "abc" and you are searching 
 		//             for char 'b', then print "b is at index 1"
-		for(int j=1; j<=a.length(); j++) {
+		for(int j=0; j<=a.length(); j++){
 			if(a.charAt(j)==b.charAt(0)){
 				JOptionPane.showMessageDialog(null, "'" + b + "' is at index " + j +".");
 			}
