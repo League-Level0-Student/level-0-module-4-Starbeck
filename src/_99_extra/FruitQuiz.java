@@ -16,6 +16,9 @@ public class FruitQuiz extends KeyAdapter {
 
 	void makeQuestions() {
 		question1 = new JLabel("<html>Which is not a real fruit? <br> A: Dragon Fruit <br> B: Durian <br> C: Crazyberry</html>");
+		question2 = new JLabel("<html>Which is not a real fruit? <br> A: Strawberry <br> B: Tomato <br> C: Banana</html>");
+		question3 = new JLabel("<html>Which is not a real fruit? <br> A: Pinapple <br> B: Mango <br> C: Cuberry</html>");
+		question4 = new JLabel("<html>Which is not a real fruit? <br> A: Lychee Fruit <br> B: Grapefruit <br> C: Watermelon</html>");
 		// 11. Make another question called "question2".  Use question1 above as a guide.
 	}
 
@@ -34,19 +37,68 @@ public class FruitQuiz extends KeyAdapter {
 			
 			// 13. check if it is right or wrong like you did for question1
 		
+		if (question4.isShowing()) {
+			// 3. If they selected the right fruit, do steps 4 and 7
+			//if(question4==0){
+				// 4. Call the correct() method
+				//correct();
+				//
+				// 7. Use the nextQuestion() method to go to question2
+				//nextQuestion();
+				//}
+			// 8. else (if they touched something else)
+				//else{
+				// 9. Call the incorrect() method
+				//incorrect();
+				//}
+		}
+		
+		if (question3.isShowing()) {
+			// 3. If they selected the right fruit, do steps 4 and 7
+			//if(question3==0){
+				// 4. Call the correct() method
+				//correct();
+				//
+				// 7. Use the nextQuestion() method to go to question2
+				//nextQuestion();
+				//}
+			// 8. else (if they touched something else)
+				//else{
+				// 9. Call the incorrect() method
+				//incorrect();
+				//}
+		}
+		
+		if (question2.isShowing()) {
+			// 3. If they selected the right fruit, do steps 4 and 7
+			//if(question2==0){
+				// 4. Call the correct() method
+				//correct();
+				//
+				// 7. Use the nextQuestion() method to go to question2
+				//nextQuestion();
+				//}
+			// 8. else (if they touched something else)
+				//else{
+				// 9. Call the incorrect() method
+				//incorrect();
+				//}
+		}
 			
 		if (question1.isShowing()) {
 			// 3. If they selected the right fruit, do steps 4 and 7
-			
+			//if(question1==0){
 				// 4. Call the correct() method
-				
+				//correct();
+				//
 				// 7. Use the nextQuestion() method to go to question2
-			
-			
+				//nextQuestion();
+				//}
 			// 8. else (if they touched something else)
-				
+				//else{
 				// 9. Call the incorrect() method
-		
+				//incorrect();
+				//}
 		}
 
 	}

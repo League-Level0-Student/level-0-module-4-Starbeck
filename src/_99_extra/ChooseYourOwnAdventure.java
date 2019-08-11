@@ -6,8 +6,8 @@ public class ChooseYourOwnAdventure {
 	public static void main(String[] args) {
 		//story w/ options
 		int score = 10;
-		int plot = 0;
-		int scene = 0;
+		//int plot = 0;
+		//int scene = 0;
 		JOptionPane.showMessageDialog(null, "Background info");
 		int choiceOne = JOptionPane.showOptionDialog(null, "Choice 1", "Choice", 0, JOptionPane.INFORMATION_MESSAGE, null, new String[] { "No", "Yes"}, null);
 		//System.err.println(choiceOne);
