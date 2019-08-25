@@ -15,7 +15,7 @@ public class DontForgetTheLyrics {
 	 * 1. To record a sound clip, open Audacity and record your song.
 	 * 
 	 * 2. Click File -> Export Audio, and save your file on the Desktop.
-	 * 
+	 * points
 	 * 3. Drag your file from the Desktop into the "default package" under "src".
 	 */
 	
@@ -26,30 +26,36 @@ public class DontForgetTheLyrics {
 		
 		JOptionPane.showMessageDialog(null, "1 2 ");
 		// 6. Make a pop-up for the player to type their answer.
-		String a = JOptionPane.showInputDialog(null, "rest of the lyrics");
+		String a = JOptionPane.showInputDialog(null, "What goes next?");
 		// 7. If they answered correctly, tell them that they were right.
 		int points=0;
+		int totalPoints = 0;
+		
 		if(a.equals("3")) {
-			JOptionPane.showMessageDialog(null, "right");
+			JOptionPane.showMessageDialog(null, "correct");
 			points += 50;
+			totalPoints += 50;
 		}else {
-			JOptionPane.showMessageDialog(null, "wrong");
+			JOptionPane.showMessageDialog(null, "incorrect");
+			totalPoints += 50;
 		}
 		// 8. Otherwise, tell them they are wrong, and give them the answer.
 		JOptionPane.showMessageDialog(null, "a b ");
 		// 6. Make a pop-up for the player to type their answer.
-		String b = JOptionPane.showInputDialog(null, "rest of the lyrics");
+		String b = JOptionPane.showInputDialog(null, "What goes next?");
 		// 7. If they answered correctly, tell them that they were right.
 		if(b.equals("c")) {
-			JOptionPane.showMessageDialog(null, "right");
+			JOptionPane.showMessageDialog(null, "correct");
 			points += 50;
+			totalPoints += 50;
 		}else {
-			JOptionPane.showMessageDialog(null, "wrong");
+			JOptionPane.showMessageDialog(null, "incorrect");
+			totalPoints += 50;
 		}
 		// 9. Record another sound and repeat steps 5-8.
 		
 		// 10. [optional] Add a points variable that will calculate their final score.
-		//bar?
+		JOptionPane.showMessageDialog(null, "You scored " + points + " points out of " + totalPoints + " possible points. \nYou got " + ((points*100)/totalPoints) + "% of the questions correct.");
 		
 	}
 	
