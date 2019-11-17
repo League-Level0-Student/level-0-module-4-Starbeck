@@ -9,6 +9,8 @@ public class HappyPet {
 	public static void main(String[] args) {
 		// 1. Ask the user what kind of pet they want to buy, and store their answer in a variable
 		String petKind = JOptionPane.showInputDialog(null, "What kind of pet do you want to buy?", "kind of pet");
+		//int petKind = JOptionPane.showOptionDialog(null, "secondOption confirm message", "secondOption confirm title", 0, JOptionPane.INFORMATION_MESSAGE, null, new String[] { "Cancel (0)", "Confirm (1)"}, null);
+		//otherwise, can type pet kind
 		int happinessLevel = 0;
 		// 7. REPEAT steps 3 - 6 enough times to make your pet happy!
 		while(happinessLevel <= 100) {
