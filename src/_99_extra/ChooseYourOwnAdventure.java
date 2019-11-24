@@ -3,6 +3,7 @@ package _99_extra;
 import javax.swing.JOptionPane;
 import java.util.Random;
 //import random??
+//(remove "!="s when become true)
 // (!=) Skeleton Complete W/ room for change and additions
 //awaiting fill-out
 
@@ -14,8 +15,14 @@ public class ChooseYourOwnAdventure {
 		int score = 10; //show?
 		int maxScorePossible = 10; //keep hidden
 		int life = 20; //show
+		int caste = 0;
 		//int plot = 0; //hide
 		//int scene = 0; //hide/show at top?
+		Random rand = new Random();
+		int randcaste = rand.nextInt(100);
+		if(randcaste==100) {
+			caste=0;//mutant
+		}
 		//while life>0; //do >
 		JOptionPane.showMessageDialog(null, "Background info");
 		String MCName = JOptionPane.showInputDialog(null, "What is this character's name?");
@@ -44,3 +51,4 @@ public class ChooseYourOwnAdventure {
 //gameStart
 //change z=x+y then x=y then y=z x still == old y && != new y
 //19 //17 //14 //12 //9 //8 //7 //6 //5 //2 //1 (mutant) //for up/down town??
+//if (caste==100){}else if(caste>=98){}else if(){}else if(){}
