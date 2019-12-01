@@ -27,14 +27,14 @@ public class DontForgetTheLyrics {
 		JOptionPane.showMessageDialog(null, "For this game, we'll play the start of a song,\n and the player has to guess the rest of the lyrics.");
 		// 5. Use the playSound method to play your song.
 		
-		JOptionPane.showMessageDialog(null, "DES PA ____");
+		JOptionPane.showMessageDialog(null, "1 2 _");
 		// 6. Make a pop-up for the player to type their answer.
 		String a = JOptionPane.showInputDialog(null, "What goes next?");
 		// 7. If they answered correctly, tell them that they were right.
 		int points=0;
 		int totalPoints = 0;
 		
-		if(a.equals("CITO")) {
+		if(a.equals("3")) {
 			JOptionPane.showMessageDialog(null, "correct");
 			points += 50;
 			totalPoints += 50;

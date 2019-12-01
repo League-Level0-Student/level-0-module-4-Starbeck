@@ -19,36 +19,37 @@ public class ChooseYourOwnAdventure {
 		int maxScorePossible = 10; //keep hidden
 		int life = 20; //show
 		int caste = 0;
-		String casteType = "";
+		String casteType = "mutant";
 		//int plot = 0; //hide
 		//int scene = 0; //hide/show at top?
 		//while life>0; //do >
 		//JOptionPane.showMessageDialog(null, "Background info");
 		String MCName = JOptionPane.showInputDialog(null, "What is this character's name?");
 		int MCCaste = JOptionPane.showOptionDialog(null, "Do you want to choose your caste or have it randomized?\n(realistic randomization loosely based on caste rarity for realism)", "message title", 0, JOptionPane.INFORMATION_MESSAGE, null, new String[] { "True Randomization (0)", "Realistic Randomization (1)", "Choose (2)"}, null);
-		JOptionPane.showMessageDialog(null, MCCaste);
+		//JOptionPane.showMessageDialog(null, MCCaste);
 		//Timeline Divergence Start!
-		//if(MCCaste==0){
-			//caste=realisticRandom();
-			//int choiceTwoA = JOptionPane.showOptionDialog(null, "secondOption confirm message", "secondOption confirm title", 0, JOptionPane.INFORMATION_MESSAGE, null, new String[] { "Cancel (0)", "Confirm (1)"}, null);
-			//score = score-1;
-			//maxScorePossible = score+1;
-		//}//else if(MCCaste==1) {
+		if(MCCaste==0){
+			//realisticRandom();
+			int choiceTwoA = JOptionPane.showOptionDialog(null, "secondOption confirm message", "secondOption confirm title", 0, JOptionPane.INFORMATION_MESSAGE, null, new String[] { "Cancel (0)", "Confirm (1)"}, null);
+			score = score-1;
+			maxScorePossible = score+1;
+		}else if(MCCaste==1) {
+			realisticRandom();
 			//int choiceTwoB = JOptionPane.showOptionDialog(null, "firstOption confirm message", "firstOption confirm title", 0, JOptionPane.INFORMATION_MESSAGE, null, new String[] { "Cancel (0)", "Confirm (1)"}, null);
 			//score = score+1;
 			//maxScorePossible = score+1;
-		//}else if(MCCaste==2{
-		//	JOptionPane.showMessageDialog(null, "?");
-		//}else{
+		}else if(MCCaste==2){
+			JOptionPane.showMessageDialog(null, "?");
+		}else{
 			
-		//}
+		}
 		System.exit(0);
 	}
 	public static void realisticRandom() {
 		int caste = 0;
 		Random rand = new Random();
 		int randCaste = rand.nextInt(101);
-		String casteType="";
+		String casteType="mutant";
 		if(randCaste==100){
 			caste=0;//mutant
 			casteType="mutant";
@@ -83,7 +84,7 @@ public class ChooseYourOwnAdventure {
 			caste=1;//aradia
 			casteType="burgandy";
 		}
-		//JOptionPane.showMessageDialog(null, caste + ", or " + casteType);
+		JOptionPane.showMessageDialog(null, caste + ", or " + casteType);
 	}
 }
 
