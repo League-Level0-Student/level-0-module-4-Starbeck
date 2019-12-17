@@ -29,24 +29,41 @@ public class ChooseYourOwnAdventure {
 		//JOptionPane.showMessageDialog(null, MCCaste);
 		//Timeline Divergence Start!
 		if(MCCaste==0){
+			//TrueRandom
+			caste=trueRandomInt(0);
+			String casteString=Integer.toString(caste);
+			casteType=RandomString(casteString);
+			JOptionPane.showMessageDialog(null, caste + ", or " + casteType + ".");
 			//realisticRandom();
-			int choiceTwoA = JOptionPane.showOptionDialog(null, "secondOption confirm message", "secondOption confirm title", 0, JOptionPane.INFORMATION_MESSAGE, null, new String[] { "Cancel (0)", "Confirm (1)"}, null);
-			score = score-1;
-			maxScorePossible = score+1;
+			//int choiceTwoA = JOptionPane.showOptionDialog(null, "secondOption confirm message", "secondOption confirm title", 0, JOptionPane.INFORMATION_MESSAGE, null, new String[] { "Cancel (0)", "Confirm (1)"}, null);
+			//score = score-1;
+			//maxScorePossible = score+1;
+			//String a="";
+			//String b="";
 		}else if(MCCaste==1) {
-			realisticRandom();
+			caste=realisticRandomInt(0);
+			String casteString=Integer.toString(caste);
+			casteType=RandomString(casteString);
+			JOptionPane.showMessageDialog(null, caste + ", or " + casteType + ".");
 			//int choiceTwoB = JOptionPane.showOptionDialog(null, "firstOption confirm message", "firstOption confirm title", 0, JOptionPane.INFORMATION_MESSAGE, null, new String[] { "Cancel (0)", "Confirm (1)"}, null);
 			//score = score+1;
 			//maxScorePossible = score+1;
 		}else if(MCCaste==2){
-			JOptionPane.showMessageDialog(null, "?");
+			caste=Integer.parseInt(JOptionPane.showInputDialog(null, "What do you want your caste to be?\n(1-12)"));
+			String casteString=Integer.toString(caste);
+			casteType=RandomString(casteString);
+			JOptionPane.showMessageDialog(null, caste + ", or " + casteType + ".");
+			//JOptionPane.showMessageDialog(null, "?");
 		}else{
 			
 		}
 		System.exit(0);
 	}
-	public static void realisticRandom() {
-		int caste = 0;
+
+
+	
+	public static int realisticRandomInt(int caste){
+		caste = 0;
 		Random rand = new Random();
 		int randCaste = rand.nextInt(101);
 		String casteType="mutant";
@@ -59,7 +76,7 @@ public class ChooseYourOwnAdventure {
 		}else if(randCaste>=94) {
 			caste=6;//kanaya
 			casteType="jade";
-		}else if(randCaste>89){
+		}else if(randCaste>=89){
 			caste=10;//gamzee
 			casteType="purple";
 		}else if(randCaste>=82){
@@ -84,7 +101,103 @@ public class ChooseYourOwnAdventure {
 			caste=1;//aradia
 			casteType="burgandy";
 		}
-		JOptionPane.showMessageDialog(null, caste + ", or " + casteType);
+		return caste;
+		//String casteString = Integer.toString(caste);
+		//String[] ans = new String[2];
+		//ans[0]=casteString;
+		//ans[1]=casteType;
+		//JOptionPane.showMessageDialog(null, caste + ", or " + casteType);
+	}
+	public static String RandomString(String casteType){
+		int caste = 0;
+		int randCaste=Integer.parseInt(casteType);
+		casteType="mutant";
+		if(randCaste==4){
+			caste=0;//mutant
+			casteType="mutant";
+		}else if(randCaste==11){
+			caste=11;//eridan
+			casteType="violet";
+		}else if(randCaste==6) {
+			caste=6;//kanaya
+			casteType="jade";
+		}else if(randCaste==10){
+			caste=10;//gamzee
+			casteType="purple";
+		}else if(randCaste==9){
+			caste=9;//equias
+			casteType="indigo";
+		}else if(randCaste==8){
+			caste=8;//vriska
+			casteType="blue";
+		}else if(randCaste==7){
+			caste=7;//terezi
+			casteType="teal";
+		}else if(randCaste==5){
+			caste=5;//nepeta
+			casteType="olive";
+		}else if(randCaste==3){
+			caste=3;//sollux
+			casteType="gold";
+		}else if(randCaste==2){
+			caste=2;//tavros
+			casteType="bronze";
+		}else{
+			caste=1;//aradia
+			casteType="burgandy";
+		}
+		return casteType;
+		//String casteString = Integer.toString(caste);
+		//String[] ans = new String[2];
+		//ans[0]=casteString;
+		//ans[1]=casteType;
+		//JOptionPane.showMessageDialog(null, caste + ", or " + casteType);
+	}
+	public static int trueRandomInt(int caste){
+		caste = 0;
+		Random rand = new Random();
+		int randCaste = rand.nextInt(12);
+		String casteType="mutant";
+		if(randCaste==4){
+			caste=0;//mutant
+			casteType="mutant";
+		}else if(randCaste==11){
+			caste=11;//eridan
+			casteType="violet";
+		}else if(randCaste==6) {
+			caste=6;//kanaya
+			casteType="jade";
+		}else if(randCaste==10){
+			caste=10;//gamzee
+			casteType="purple";
+		}else if(randCaste==9){
+			caste=9;//equias
+			casteType="indigo";
+		}else if(randCaste==8){
+			caste=8;//vriska
+			casteType="blue";
+		}else if(randCaste==7){
+			caste=7;//terezi
+			casteType="teal";
+		}else if(randCaste==5){
+			caste=5;//nepeta
+			casteType="olive";
+		}else if(randCaste==3){
+			caste=3;//sollux
+			casteType="gold";
+		}else if(randCaste==2){
+			caste=2;//tavros
+			casteType="bronze";
+		}else{
+			caste=1;//aradia
+			casteType="burgandy";
+		}
+		return caste;
+		//String casteString = Integer.toString(caste);
+		//String[] ans = new String[2];
+		//ans[0]=casteString;
+		//ans[1]=casteType;
+		//JOptionPane.showMessageDialog(null, caste + ", or " + casteType);
 	}
 }
 
