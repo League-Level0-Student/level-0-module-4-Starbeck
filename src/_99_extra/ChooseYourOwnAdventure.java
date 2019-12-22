@@ -22,24 +22,20 @@ public class ChooseYourOwnAdventure {
 		String casteType = "mutant";
 		//int plot = 0; //hide
 		//int scene = 0; //hide/show at top?
-		//while life>0; //do >
+		//while life>0; //do >death (w/exception checks
 		//JOptionPane.showMessageDialog(null, "Background info");
 		String MCName = JOptionPane.showInputDialog(null, "What is this character's name?");
-		int MCCaste = JOptionPane.showOptionDialog(null, "Do you want to choose your caste or have it randomized?\n(realistic randomization loosely based on caste rarity for realism)", "message title", 0, JOptionPane.INFORMATION_MESSAGE, null, new String[] { "True Randomization (0)", "Realistic Randomization (1)", "Choose (2)"}, null);
+		int MCCaste = JOptionPane.showOptionDialog(null, MCName + ",\nDo you want to choose your caste or have it randomized?\n(realistic randomization loosely based on caste rarity for realism)", "message title", 0, JOptionPane.INFORMATION_MESSAGE, null, new String[] { "True Randomization (0)", "Realistic Randomization (1)", "Choose (2)"}, null);
 		//JOptionPane.showMessageDialog(null, MCCaste);
 		//Timeline Divergence Start!
 		if(MCCaste==0){
-			//TrueRandom
 			caste=trueRandomInt(0);
 			String casteString=Integer.toString(caste);
 			casteType=RandomString(casteString);
 			JOptionPane.showMessageDialog(null, caste + ", or " + casteType + ".");
-			//realisticRandom();
 			//int choiceTwoA = JOptionPane.showOptionDialog(null, "secondOption confirm message", "secondOption confirm title", 0, JOptionPane.INFORMATION_MESSAGE, null, new String[] { "Cancel (0)", "Confirm (1)"}, null);
 			//score = score-1;
 			//maxScorePossible = score+1;
-			//String a="";
-			//String b="";
 		}else if(MCCaste==1) {
 			caste=realisticRandomInt(0);
 			String casteString=Integer.toString(caste);
@@ -53,9 +49,8 @@ public class ChooseYourOwnAdventure {
 			String casteString=Integer.toString(caste);
 			casteType=RandomString(casteString);
 			JOptionPane.showMessageDialog(null, caste + ", or " + casteType + ".");
-			//JOptionPane.showMessageDialog(null, "?");
 		}else{
-			
+			JOptionPane.showMessageDialog(null, "0_0");
 		}
 		System.exit(0);
 	}
@@ -66,144 +61,94 @@ public class ChooseYourOwnAdventure {
 		caste = 0;
 		Random rand = new Random();
 		int randCaste = rand.nextInt(101);
-		String casteType="mutant";
 		if(randCaste==100){
 			caste=0;//mutant
-			casteType="mutant";
 		}else if(randCaste>=97){
 			caste=11;//eridan
-			casteType="violet";
 		}else if(randCaste>=94) {
 			caste=6;//kanaya
-			casteType="jade";
 		}else if(randCaste>=89){
 			caste=10;//gamzee
-			casteType="purple";
 		}else if(randCaste>=82){
 			caste=9;//equias
-			casteType="indigo";
 		}else if(randCaste>=74){
 			caste=8;//vriska
-			casteType="blue";
 		}else if(randCaste>=64){
 			caste=7;//terezi
-			casteType="teal";
 		}else if(randCaste>=52){
 			caste=5;//nepeta
-			casteType="olive";
 		}else if(randCaste>=37){
 			caste=3;//sollux
-			casteType="gold";
 		}else if(randCaste>=20){
 			caste=2;//tavros
-			casteType="bronze";
 		}else{
 			caste=1;//aradia
-			casteType="burgandy";
 		}
 		return caste;
-		//String casteString = Integer.toString(caste);
-		//String[] ans = new String[2];
-		//ans[0]=casteString;
-		//ans[1]=casteType;
-		//JOptionPane.showMessageDialog(null, caste + ", or " + casteType);
 	}
 	public static String RandomString(String casteType){
-		int caste = 0;
+		//int caste = 0;
 		int randCaste=Integer.parseInt(casteType);
 		casteType="mutant";
 		if(randCaste==4){
-			caste=0;//mutant
 			casteType="mutant";
 		}else if(randCaste==11){
-			caste=11;//eridan
 			casteType="violet";
 		}else if(randCaste==6) {
-			caste=6;//kanaya
 			casteType="jade";
 		}else if(randCaste==10){
-			caste=10;//gamzee
 			casteType="purple";
 		}else if(randCaste==9){
-			caste=9;//equias
 			casteType="indigo";
 		}else if(randCaste==8){
-			caste=8;//vriska
 			casteType="blue";
 		}else if(randCaste==7){
-			caste=7;//terezi
 			casteType="teal";
 		}else if(randCaste==5){
-			caste=5;//nepeta
 			casteType="olive";
 		}else if(randCaste==3){
-			caste=3;//sollux
 			casteType="gold";
 		}else if(randCaste==2){
-			caste=2;//tavros
 			casteType="bronze";
-		}else{
-			caste=1;//aradia
+		}else {
 			casteType="burgandy";
 		}
 		return casteType;
-		//String casteString = Integer.toString(caste);
-		//String[] ans = new String[2];
-		//ans[0]=casteString;
-		//ans[1]=casteType;
-		//JOptionPane.showMessageDialog(null, caste + ", or " + casteType);
 	}
 	public static int trueRandomInt(int caste){
 		caste = 0;
 		Random rand = new Random();
 		int randCaste = rand.nextInt(12);
-		String casteType="mutant";
 		if(randCaste==4){
 			caste=0;//mutant
-			casteType="mutant";
 		}else if(randCaste==11){
 			caste=11;//eridan
-			casteType="violet";
 		}else if(randCaste==6) {
 			caste=6;//kanaya
-			casteType="jade";
 		}else if(randCaste==10){
 			caste=10;//gamzee
-			casteType="purple";
 		}else if(randCaste==9){
 			caste=9;//equias
-			casteType="indigo";
 		}else if(randCaste==8){
 			caste=8;//vriska
-			casteType="blue";
 		}else if(randCaste==7){
 			caste=7;//terezi
-			casteType="teal";
 		}else if(randCaste==5){
 			caste=5;//nepeta
-			casteType="olive";
 		}else if(randCaste==3){
 			caste=3;//sollux
-			casteType="gold";
 		}else if(randCaste==2){
 			caste=2;//tavros
-			casteType="bronze";
 		}else{
 			caste=1;//aradia
-			casteType="burgandy";
 		}
 		return caste;
-		//String casteString = Integer.toString(caste);
-		//String[] ans = new String[2];
-		//ans[0]=casteString;
-		//ans[1]=casteType;
-		//JOptionPane.showMessageDialog(null, caste + ", or " + casteType);
 	}
 }
 
 //save ability possible???
 //functions? for/while confirms? only sometimes? option to turn off/on? go back 1 option?
-//timeline based //Nonlinear?? randomization?? likelihoods?? map pre-made or randomized?
+//timeline based //Nonlinear?? randomization?? likelihoods?? map pre-made or randomized? why not and??????
 //npcs?? loyalty?? quadrants?? teams?? caste options/randomization??
 //character traits?? Hidden vs Shown? 
 //gameStart

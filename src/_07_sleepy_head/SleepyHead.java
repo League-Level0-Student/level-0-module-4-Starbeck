@@ -43,7 +43,7 @@ public class SleepyHead {
         }else if(a==0&&b==1){
         	JOptionPane.showMessageDialog(null, "Get up.");
         }else{
-        	JOptionPane.showMessageDialog(null, "~");
+        	JOptionPane.showMessageDialog(null, "?");
         }
         /*
          * Print “sleep in�? if it is a vacation or a weekend. If it’s a weekday,
