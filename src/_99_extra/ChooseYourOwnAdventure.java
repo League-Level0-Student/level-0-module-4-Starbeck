@@ -45,8 +45,9 @@ public class ChooseYourOwnAdventure {
 			//score = score+1;
 			//maxScorePossible = score+1;
 		}else if(MCCaste==2){
-			caste=Integer.parseInt(JOptionPane.showInputDialog(null, "What do you want your caste to be?\n(1-12)"));
+			caste=Integer.parseInt(JOptionPane.showInputDialog(null, "What do you want your caste to be?\n(0-11)"));
 			String casteString=Integer.toString(caste);
+			//if caste is between 0 and 11
 			casteType=RandomString(casteString);
 			JOptionPane.showMessageDialog(null, caste + ", or " + casteType + ".");
 		}else{
@@ -54,8 +55,6 @@ public class ChooseYourOwnAdventure {
 		}
 		System.exit(0);
 	}
-
-
 	
 	public static int realisticRandomInt(int caste){
 		caste = 0;
@@ -86,8 +85,8 @@ public class ChooseYourOwnAdventure {
 		}
 		return caste;
 	}
+	
 	public static String RandomString(String casteType){
-		//int caste = 0;
 		int randCaste=Integer.parseInt(casteType);
 		casteType="mutant";
 		if(randCaste==4){
@@ -110,11 +109,16 @@ public class ChooseYourOwnAdventure {
 			casteType="gold";
 		}else if(randCaste==2){
 			casteType="bronze";
-		}else {
+		}else if(randCaste==1){
 			casteType="burgandy";
+		}else if(randCaste==0){
+			casteType="mutant";
+		}else {
+			//oof
 		}
 		return casteType;
 	}
+	
 	public static int trueRandomInt(int caste){
 		caste = 0;
 		Random rand = new Random();
@@ -148,7 +152,7 @@ public class ChooseYourOwnAdventure {
 
 //save ability possible???
 //functions? for/while confirms? only sometimes? option to turn off/on? go back 1 option?
-//timeline based //Nonlinear?? randomization?? likelihoods?? map pre-made or randomized? why not and??????
+//timeline based //Nonlinear?? randomization?? likelihoods?? map pre-made or randomized? options for both?
 //npcs?? loyalty?? quadrants?? teams?? caste options/randomization??
 //character traits?? Hidden vs Shown? 
 //gameStart

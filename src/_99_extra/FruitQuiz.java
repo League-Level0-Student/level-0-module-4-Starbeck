@@ -25,8 +25,7 @@ public class FruitQuiz extends KeyAdapter {
 	public void keyPressed(KeyEvent arg0) {
 		int keyCode = arg0.getKeyCode();
 		// 1. Print out the key code variable
-		System.err.println(keyCode);
-		JOptionPane.showMessageDialog(null, keyCode);
+		//System.err.println(keyCode);
 		
 		// 2. Make 3 int variables that hold the key codes for A, b, and C
 		int a=65;
@@ -35,63 +34,66 @@ public class FruitQuiz extends KeyAdapter {
 		// 14. Repeat steps 11, 12, and 13 for question3 and question4 - IMPORTANT: The questions must be in reverse order from top to bottom to work properly
 		if (question4.isShowing()) {
 			// 3. If they selected the right fruit, do steps 4 and 7
-			//if(question4==67){
+			if(keyCode==c){
 				// 4. Call the correct() method
-				//correct();
-				//
+				correct();
 				// 7. Use the nextQuestion() method to go to question2
 				//nextQuestion();
-				//}
+				System.exit(0);
+				}
 			// 8. else (if they touched something else)
-				//else{
+				else if(keyCode==a||keyCode==b){
 				// 9. Call the incorrect() method
-				//incorrect();
-				//}
+				incorrect();
+				System.exit(0);
+				}
 		}
 		if (question3.isShowing()) {
 			// 3. If they selected the right fruit, do steps 4 and 7
-			//if(question3==0){
+			if(keyCode==c){
 				// 4. Call the correct() method
-				//correct();
-				//
+				correct();
 				// 7. Use the nextQuestion() method to go to question2
-				//nextQuestion(question4);
-				//}
+				nextQuestion(question4);
+				}
 			// 8. else (if they touched something else)
-				//else{
+			else if(keyCode==a||keyCode==b){
 				// 9. Call the incorrect() method
-				//incorrect();
-				//}
+				incorrect();
+				nextQuestion(question4);
+				}
 		}
 		if (question2.isShowing()) {
 			// 3. If they selected the right fruit, do steps 4 and 7
-			//if(question2==0){
+			if(keyCode==c){
 				// 4. Call the correct() method
-				//correct();
+				correct();
 				//
 				// 7. Use the nextQuestion() method to go to question2
-				//nextQuestion(question3);
-				//}
+				nextQuestion(question3);
+				}
 			// 8. else (if they touched something else)
-				//else{
+			else if(keyCode==a||keyCode==b){
 				// 9. Call the incorrect() method
-				//incorrect();
-				//}
+				incorrect();
+				nextQuestion(question3);
+				}
 		}
 		if (question1.isShowing()) {
 			// 3. If they selected the right fruit, do steps 4 and 7
-			//if(question1==0){
+			if(keyCode==c){
 				// 4. Call the correct() method
-				//correct();
+				correct();
 				//
 				// 7. Use the nextQuestion() method to go to question2
-				//nextQuestion(question2);
-				//}
+				nextQuestion(question2);
+				}
 			// 8. else (if they touched something else)
-				//else{
+			else if(keyCode==a||keyCode==b){
 				// 9. Call the incorrect() method
-				//incorrect();
-				//}
+				incorrect();
+				nextQuestion(question2);
+				}
 		}
 	}
 	private void correct() {
@@ -99,11 +101,13 @@ public class FruitQuiz extends KeyAdapter {
 		// the 'extra' package. It must be a .wav file. 
 		// There are lots on freesound.org
 		// 6. Use the playSound method to play your sound
-
+		playSound("correct.wav");
+		JOptionPane.showMessageDialog(null, "correct");
 	}
 	private void incorrect() {
 		// 10. Find a sound for wrong answers and put it in the default package. Use the playSound method to play it.
-		
+		playSound("wrong.wav");
+		JOptionPane.showMessageDialog(null, "incorrect");
 	}
 	private void nextQuestion(JLabel newQuestion) {
 		frame.remove(question1);
