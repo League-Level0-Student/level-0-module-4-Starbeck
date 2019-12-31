@@ -8,13 +8,14 @@ import javax.swing.JOptionPane;
 
 public class PiAloud {
 	public static void main(String[] args) {
-		String a = "3.14159265359";
+		String a = "3.141592653592";
 		//JOptionPane.showMessageDialog(null, a.charAt(0));
-		for(int i=0;i<a.length(); i++){
+		for(int i=0;i<a.length()-1; i++){
 			JOptionPane.showMessageDialog(null, a.charAt(i));
+			speak(a.charAt(i));
 		}
-		String b=JOptionPane.showInputDialog("What number comes after 3.14159?");
-		
+		String b=JOptionPane.showInputDialog("What number comes after 3.14159?\n(Input in number form; e.g. '1', '2', '3'; not text form; e.g. 'one', 'Two', 'THREE')");
+		//a.charAt(a.length())
 		//int c = Integer.parseInt(b);
 		//if((b=="two")||(b=="Two")||(b=="TWO")){
 		//	JOptionPane.showMessageDialog(null, "Correct");
@@ -22,10 +23,12 @@ public class PiAloud {
 			int c = Integer.parseInt(b);
 			if(c==2) {
 				JOptionPane.showMessageDialog(null, "Correct");
+				System.err.println("Correct");
 			}else{
 				JOptionPane.showMessageDialog(null, "Incorrect");
+				System.err.println("Incorrect");
 			}
-		//}	
+		//}	 
 	}
 	
 	/* 1. Make a main method and make sure your program can run

@@ -11,7 +11,7 @@ public class StringMethods2 {
 		
 		// 1. Create a String variable and initialize it with
 		//    random upper and lower case characters.
-		String a = "rAnDoM uPpEr AnD lOwEr CaSe ChArAcTeRs";
+		String a = "cReAtE a StRiNg VaRiAbLe AnD iNiTiAlIzE iT wItH rAnDoM uPpEr AnD lOwEr CaSe ChArAcTeRs";
 		// 2. Print your String to the console in upper case.
 		
 		// 3. Print your String to the console in lower case.
@@ -24,6 +24,12 @@ public class StringMethods2 {
 		
 		// 6. BONUS -- print the LAST 3 char's of your string using
 		//        .length() to determine WHERE the last 3 char's are located.
-		//JOptionPane.showMessageDialog(null, (a.charAt((a.length()-3))) + (a.charAt((a.length()-2))) + (a.charAt((a.length()-1))));
+		int b = a.length()-3;
+		int c;
+		int d;
+		//String e=a.charAt(a.length(-3));
+		String f;
+		String g;
+		JOptionPane.showMessageDialog(null, (a.charAt((a.length(b)))) + (a.charAt((a.length()-2))) + (a.charAt((a.length()-1))));
 	}
 }

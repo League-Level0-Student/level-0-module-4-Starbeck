@@ -5,21 +5,17 @@ import javax.swing.JOptionPane;
 
 import java.applet.AudioClip;
 import java.util.Random;
-//import random??
-//(remove "!="s when it becomes true)
-// (!=) Skeleton Complete W/ room for change and additions
-//awaiting fill-out
 
 public class ChooseYourOwnAdventure {
 	public static void main(String[] args) {
 		//System.err.println();
 		//story w/ options
-		//hidden statsssss
-		int score = 10; //show?
-		int maxScorePossible = 10; //keep hidden
-		int life = 20; //show
+		//hidden statistics
+		//int score = 10; //show?
+		//int maxScorePossible = 10; //keep hidden. Until end?
+		//int life = 20; //show.
 		int caste = 0;
-		String casteType = "mutant";
+		String casteType = "unspecified";
 		//int plot = 0; //hide
 		//int scene = 0; //hide/show at top?
 		//while life>0; //do >death (w/exception checks
@@ -61,27 +57,27 @@ public class ChooseYourOwnAdventure {
 		Random rand = new Random();
 		int randCaste = rand.nextInt(101);
 		if(randCaste==100){
-			caste=0;//mutant
+			caste=0;//Other/Unclassified
 		}else if(randCaste>=97){
-			caste=11;//eridan
+			caste=11;//Violet
 		}else if(randCaste>=94) {
-			caste=6;//kanaya
+			caste=6;//Jade
 		}else if(randCaste>=89){
-			caste=10;//gamzee
+			caste=10;//Purple
 		}else if(randCaste>=82){
-			caste=9;//equias
+			caste=9;//Indigo
 		}else if(randCaste>=74){
-			caste=8;//vriska
+			caste=8;//Blue
 		}else if(randCaste>=64){
-			caste=7;//terezi
+			caste=7;//Teal
 		}else if(randCaste>=52){
-			caste=5;//nepeta
+			caste=5;//Olive
 		}else if(randCaste>=37){
-			caste=3;//sollux
+			caste=3;//Gold
 		}else if(randCaste>=20){
-			caste=2;//tavros
+			caste=2;//Bronze
 		}else{
-			caste=1;//aradia
+			caste=1;//Burgandy
 		}
 		return caste;
 	}
@@ -114,7 +110,7 @@ public class ChooseYourOwnAdventure {
 		}else if(randCaste==0){
 			casteType="mutant";
 		}else {
-			//oof
+			casteType="unspecified";
 		}
 		return casteType;
 	}

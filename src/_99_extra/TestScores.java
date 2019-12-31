@@ -18,5 +18,6 @@ public class TestScores {
 		}else {
 			JOptionPane.showMessageDialog(null, "Either your input is invalid, or you got higher than 100%.\nEither way, you already know your answer.");
 		}
+		System.exit(0);
 	}
 }
