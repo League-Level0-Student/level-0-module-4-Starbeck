@@ -1,8 +1,3 @@
-import ddf.minim.*;
-Minim minim = new Minim(this); 
-AudioSample doh;
-AudioSample woohoo;
-
 void setup() {
   PImage waldo = loadImage("waldo.jpg"); // Change this to match your file name.
   size(500, 500);
@@ -32,3 +27,8 @@ void playDoh() {
      doh.stop();
      doh.trigger();
 }
+
+import ddf.minim.*;
+Minim minim = new Minim(this); 
+AudioSample doh;
+AudioSample woohoo;
