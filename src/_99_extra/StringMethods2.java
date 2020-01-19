@@ -10,10 +10,13 @@ public class StringMethods2 {
 		// 1. Create a String variable and initialize it with
 		//    random upper and lower case characters.
 		String a = "cReAtE a StRiNg VaRiAbLe AnD iNiTiAlIzE iT wItH rAnDoM uPpEr AnD lOwEr CaSe ChArAcTeRs";
+		System.err.print(a + "\n");
 		// 2. Print your String to the console in upper case.
-		
+		String e = a.toLowerCase();
+		System.err.print(e + "\n");
 		// 3. Print your String to the console in lower case.
-		
+		String f = a.toUpperCase();
+		System.err.print(f + "\n");
 		// 4. Print the first 3 char's of your String
 		//    HINT: .substring(start,end) a.substring(0,3)
 		JOptionPane.showMessageDialog(null, a.substring(0,3));
