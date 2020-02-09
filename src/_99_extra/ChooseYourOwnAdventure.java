@@ -8,6 +8,30 @@ import java.util.Random;
 
 public class ChooseYourOwnAdventure {
 	public static void main(String[] args) {
+		
+		int opOne=JOptionPane.showOptionDialog(null, "Question 1", "Question One", 0, JOptionPane.INFORMATION_MESSAGE, null, new String[] { "Option 2 (0)", "Option 1 (1)"}, null);
+		if (opOne==0) {
+			int opTwo=JOptionPane.showOptionDialog(null, "Question 2", "Question Two-A", 0, JOptionPane.INFORMATION_MESSAGE, null, new String[] { "Option 2 (0)", "Option 1 (1)"}, null);
+			if (opTwo==0) {
+				JOptionPane.showMessageDialog(null, "Bad End 1");
+			}else if (opTwo==1) {
+				JOptionPane.showMessageDialog(null, "Good End 1");
+			}else {
+				JOptionPane.showMessageDialog(null, "Null End");
+			}
+		}else if(opOne==1) {
+			int opTwo=JOptionPane.showOptionDialog(null, "Question 2", "Question Two-B", 0, JOptionPane.INFORMATION_MESSAGE, null, new String[] { "Option 2 (0)", "Option 1 (1)"}, null);
+				if (opTwo==0) {
+					JOptionPane.showMessageDialog(null, "Bad End 2");
+				}else if (opTwo==1) {
+					JOptionPane.showMessageDialog(null, "Good End 2");
+				}else {
+					JOptionPane.showMessageDialog(null, "Null End");
+				}
+		}else {
+			JOptionPane.showMessageDialog(null, "Null End");
+		}
+		System.exit(0);
 		//System.err.println();
 		//story w/ options
 		//hidden statistics
