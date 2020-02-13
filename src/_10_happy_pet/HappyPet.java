@@ -1,5 +1,6 @@
 package _10_happy_pet;
 import javax.swing.JOptionPane;
+import java.util.Random;
 
 public class HappyPet {
 	
@@ -21,23 +22,24 @@ public class HappyPet {
 			//System.err.println(task);
 			// 5. Use user input to call the appropriate method created in step 4.
 			if(task==0) {
-				JOptionPane.showMessageDialog(null, "You fed your pet");
+				JOptionPane.showMessageDialog(null, "You fed your " + petKind + ".");
 				happinessLevel = happinessLevel+(100/4);
 			}else if(task==1) {
-				JOptionPane.showMessageDialog(null, "You cleaned your pet");
+				JOptionPane.showMessageDialog(null, "You cleaned your " + petKind + ".");
 				happinessLevel = happinessLevel+(100/4);
 			}else if(task==2) {
-				JOptionPane.showMessageDialog(null, "You groomed your pet");
+				JOptionPane.showMessageDialog(null, "You groomed your " + petKind + ".");
 				happinessLevel = happinessLevel+(100/4);
 			}else if(task==3) {
-				JOptionPane.showMessageDialog(null, "You pet your pet");
+				JOptionPane.showMessageDialog(null, "You pet your " + petKind + ".");
 				happinessLevel = happinessLevel+(100/4);
 			}else {
 				JOptionPane.showMessageDialog(null, "?");
-				//happinessLevel = Random(100);
+				Random rand = new Random();
+				happinessLevel = rand.nextInt(101);
 			}
 			if(happinessLevel >= 100) {
-				JOptionPane.showMessageDialog(null, "You love your pet");
+				JOptionPane.showMessageDialog(null, "Wow! You love your " + petKind + ".");
 				break;
 			}
 			// 6. If you determine the happiness level is large enough, tell the
