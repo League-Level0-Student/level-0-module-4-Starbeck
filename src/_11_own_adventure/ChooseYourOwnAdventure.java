@@ -1,4 +1,4 @@
-package _99_extra;
+package _11_own_adventure;
 
 import javax.swing.JApplet;
 import javax.swing.JOptionPane;

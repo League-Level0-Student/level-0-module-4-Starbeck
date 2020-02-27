@@ -22,15 +22,18 @@ void draw() {
          if(mouseY>=190&&mouseY<=290){
            playWoohoo();
            print("Woohoo");
-           system.err.exit(5);
+           exit();
          }else{
            playDoh();
            print("Doh");
+           exit();
          }
        }else{
          playDoh();
          print("Doh");
+         exit();
        }
+       exit();
       }
 }
 
